@@ -1,0 +1,9 @@
+{% if liste_des_salles %}
+    <ul>
+    {% for salle in liste_des_salles %}
+        <li><a href="{{ salle.id }}/">{{ salle.nom }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

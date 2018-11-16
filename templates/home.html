@@ -5,7 +5,18 @@
 
 {% block content %}
 {% if user.is_authenticated %}
-  Bienvenue à vous, {{ user.username }}.
+Bienvenue à vous, {{ user.username }}.
+{% if liste_des_salles %}
+    <ul>
+    {% for salle in liste_des_salles %}
+        <li><a href="{{ salle.id }}/">{{ salle.nom }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>Aucune salle n'est disponible.</p>
+{% endif %}
+
+
   <p><a href="{% url 'logout' %}">deconnection</a></p>
 {% else %}
   <p>connectez-vous</p>
