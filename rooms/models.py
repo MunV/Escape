@@ -5,7 +5,7 @@ class Salle(models.Model):
     ressource_type = models.CharField(max_length=200)
     localisation = models.CharField(max_length=200)
     capacite = models.IntegerField(default=1)
-     def __str__(self):
+    def __str__(self):
         return self.nom
 
 class Reservation(models.Model):
