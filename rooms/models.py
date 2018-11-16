@@ -13,6 +13,5 @@ class Reservation(models.Model):
     titre = models.CharField(max_length=200)
     date_debut = models.DateTimeField('date de debut')
     date_fin = models.DateTimeField('date de fin')
-    
     def __str__(self):
-        return self.salle
+        return self.titre

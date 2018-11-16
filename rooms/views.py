@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 
+from .models import Salle
 
 def index(request):
-    return HttpResponse("Acceuil")
+    return HttpResponse("Acceuil.")
 
 def detail(request, salle_id):
     return HttpResponse("Salle numero %s." % salle_id)
